@@ -2,9 +2,9 @@ package main
 
 import (
 	"flag"
+	"game-server/nngame-service/services"
 	"os"
 	"strings"
-	"game-server/nngame-service/services"
 
 	"github.com/spf13/viper"
 	"github.com/topfreegames/pitaya"

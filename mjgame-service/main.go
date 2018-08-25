@@ -2,9 +2,9 @@ package main
 
 import (
 	"flag"
+	"game-server/mjgame-service/services"
 	"os"
 	"strings"
-	"game-server/mjgame-service/services"
 
 	"github.com/spf13/viper"
 	"github.com/topfreegames/pitaya"
