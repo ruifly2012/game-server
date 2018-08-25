@@ -1,0 +1,71 @@
+# docker-compose.yaml
+# 同样遵循严格的缩进
+version: '3.1'
+
+services:
+  web-service:
+    build: ./web-service
+    environment:
+      - "ETCD_HOST=etcd:2379"
+      - "NATS_HOST=nats://nats:4222"
+    depends_on:
+      - datastore
+      - nats
+      - etcd
+    ports:
+    - 8080:8080
+
+  connector-service:
+    build: ./connector-service
+    environment:
+      - "ETCD_HOST=etcd:2379"
+      - "NATS_HOST=nats://nats:4222"
+    depends_on:
+      - nats
+      - etcd
+    ports:
+      - 3250:3250
+
+  lobby-service:
+    build: ./lobby-service
+    environment:
+      - "ETCD_HOST=etcd:2379"
+      - "NATS_HOST=nats://nats:4222"
+    depends_on:
+      - nats
+      - etcd
+
+  mjgame-service:
+    build: ./mjgame-service
+    environment:
+      - "DB_HOST=datastore:27017"
+      - "ETCD_HOST=etcd:2379"
+      - "NATS_HOST=nats://nats:4222"
+    depends_on:
+      - nats
+      - etcd
+
+  nngame-service:
+    build: ./nngame-service
+    environment:
+      - "ETCD_HOST=etcd:2379"
+      - "NATS_HOST=nats://nats:4222"
+    depends_on:
+      - nats
+      - etcd
+
+  datastore:
+    image: mongo
+    ports:
+      - 27017:27017
+
+  nats:
+    image: nats
+    ports:
+      - 4222:4222
+
+  etcd:
+    image: appcelerator/etcd
+    ports:
+      - 2379:2379
+
