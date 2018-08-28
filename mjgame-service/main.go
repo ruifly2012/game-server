@@ -57,7 +57,7 @@ func main() {
 	config.Set("pitaya.cluster.sd.etcd.endpoints", ehost)
 	config.Set("pitaya.cluster.rpc.server.nats.connect", nhost)
 	config.Set("pitaya.cluster.rpc.client.nats.connect", nhost)
-
+	config.Set("pitaya.metrics.prometheus.enabled", true)
 	config.Set("pitaya.handler.messages.compression", false)
 
 	pitaya.Configure(*isFrontend, *svType, pitaya.Cluster, map[string]string{}, config)
