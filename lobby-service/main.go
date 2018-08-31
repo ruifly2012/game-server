@@ -1,4 +1,4 @@
-package main
+package lobby_service
 
 import (
 	"flag"

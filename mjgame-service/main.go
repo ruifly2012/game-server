@@ -1,4 +1,4 @@
-package main
+package mjgame_service
 
 import (
 	"flag"

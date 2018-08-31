@@ -1,4 +1,4 @@
-package main
+package nngame_service
 
 import (
 	"flag"

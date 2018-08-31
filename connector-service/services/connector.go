@@ -27,12 +27,12 @@ func NewConnector() *Connector {
 }
 
 // Init runs on service initialization
-func (m *Connector) Init() {}
+func (c *Connector) Init() {}
 
 // AfterInit component lifetime callback
-func (m *Connector) AfterInit() {}
+func (c *Connector) AfterInit() {}
 
-// Entry is the entrypoint
+// Entry is the entryPoint
 func (c *Connector) Entry(ctx context.Context, req *protocol.LoginToGameServerRequest) (*protocol.JoinResponse, error) {
 
 	return &protocol.JoinResponse{Result: "ok"}, nil

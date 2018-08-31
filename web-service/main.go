@@ -1,56 +1,56 @@
-package main
+package web_service
 
 import (
-	"flag"
-	"github.com/spf13/viper"
-	"github.com/topfreegames/pitaya"
-	"github.com/topfreegames/pitaya/logger"
-	"github.com/topfreegames/pitaya/serialize/json"
-	"os"
-)
-
-const (
-	DEFAULT_ETCD_HOST = "localhost:2379"
-	DEFAULT_NATS_HOST = "nats://localhost:4222"
+	"github.com/kataras/iris"
+	"github.com/kataras/iris/middleware/logger"
+	"github.com/kataras/iris/middleware/recover"
 )
 
 func main() {
+	startHttpServer()
+}
 
-	bind := flag.String("bind", "0.0.0.0", "the server bind")
-	port := flag.Int("port", 8080, "the server port")
-	svType := flag.String("type", "web", "the server type")
-	isFrontend := flag.Bool("frontend", false, "if server is frontend")
+/*
+ * Http Server
+ * serve client request: register|login|loginByGuest
+ */
+func startHttpServer() {
+	app := iris.New()
 
-	flag.Parse()
+	// Optionally, add two built'n handlers
+	// that can recover from any http-relative panics
+	// and log the requests to the terminal.
+	app.Use(recover.New())
+	app.Use(logger.New())
 
-	app, err := NewApp(*bind, *port)
+	registerHandlers(app)
 
-	if err != nil {
-		logger.Log.Fatal(err)
-	}
+	app.Run(iris.Addr(":8080"))
+}
 
-	app.Init()
+func registerHandlers(app *iris.Application) {
+	app.Post("/register", registerHandler)
+	app.Post("/login", loginHandler)
+	app.Post("/loginByGuest", loginByGuestHandler)
+}
 
-	defer pitaya.Shutdown()
-	pitaya.SetSerializer(json.NewSerializer())
+func registerHandler(ctx iris.Context) {
+	ctx.JSON(iris.Map{
+		"status":     "failed",
+		"error_code": "error_password_invalid"})
+	return
+}
 
-	ehost := os.Getenv("ETCD_HOST")
-	if ehost == "" {
-		ehost = DEFAULT_ETCD_HOST
-	}
+func loginHandler(ctx iris.Context) {
+	ctx.JSON(iris.Map{
+		"status":     "failed",
+		"error_code": "error_password_invalid"})
+	return
+}
 
-	nhost := os.Getenv("NATS_HOST")
-	if nhost == "" {
-		nhost = DEFAULT_NATS_HOST
-	}
-
-	config := viper.New()
-	config.Set("pitaya.cluster.sd.etcd.endpoints", ehost)
-	config.Set("pitaya.cluster.rpc.server.nats.connect", nhost)
-	config.Set("pitaya.cluster.rpc.client.nats.connect", nhost)
-	config.Set("pitaya.metrics.prometheus.enabled", true)
-	config.Set("pitaya.handler.messages.compression", false)
-
-	pitaya.Configure(*isFrontend, *svType, pitaya.Cluster, map[string]string{}, config)
-	pitaya.Start()
+func loginByGuestHandler(ctx iris.Context) {
+	ctx.JSON(iris.Map{
+		"status":     "failed",
+		"error_code": "error_password_invalid"})
+	return
 }
