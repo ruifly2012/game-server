@@ -5,24 +5,50 @@ require (
 	github.com/DataDog/datadog-go v0.0.0-20180822151419-281ae9f2d895 // indirect
 	github.com/Joker/jade v0.7.0 // indirect
 	github.com/Shopify/goreferrer v0.0.0-20180807163728-b9777dc9f9cc // indirect
+	github.com/ajg/form v0.0.0-20160822230020-523a5da1a92f // indirect
 	github.com/aymerick/raymond v2.0.2+incompatible // indirect
 	github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973 // indirect
+	github.com/boltdb/bolt v1.3.1 // indirect
+	github.com/codahale/hdrhistogram v0.0.0-20161010025455-3a0bb77429bd // indirect
+	github.com/coreos/bbolt v1.3.0 // indirect
 	github.com/coreos/etcd v3.3.9+incompatible // indirect
+	github.com/coreos/go-semver v0.2.0 // indirect
+	github.com/coreos/go-systemd v0.0.0-20180828140353-eee3db372b31 // indirect
+	github.com/coreos/pkg v0.0.0-20180108230652-97fdf19511ea // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/eknkc/amber v0.0.0-20171010120322-cdade1c07385 // indirect
 	github.com/fatih/structs v1.0.0 // indirect
 	github.com/flosch/pongo2 v0.0.0-20180809100617-24195e6d38b0 // indirect
 	github.com/fsnotify/fsnotify v1.4.7 // indirect
+	github.com/gavv/monotime v0.0.0-20171021193802-6f8212e8d10d // indirect
+	github.com/ghodss/yaml v1.0.0 // indirect
 	github.com/gogo/protobuf v1.1.1 // indirect
+	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b // indirect
+	github.com/golang/groupcache v0.0.0-20180513044358-24b0969c4cb7 // indirect
+	github.com/golang/mock v1.1.1 // indirect
 	github.com/golang/protobuf v1.2.0 // indirect
+	github.com/google/btree v0.0.0-20180813153112-4030bb1f1f0c // indirect
+	github.com/google/go-querystring v0.0.0-20170111101155-53e6ce116135 // indirect
 	github.com/google/uuid v0.0.0-20171129191014-dec09d789f3d
-	github.com/gorilla/mux v1.6.2
+	github.com/gopherjs/gopherjs v0.0.0-20180825215210-0210a2f0f73c // indirect
 	github.com/gorilla/websocket v1.3.0 // indirect
+	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 // indirect
+	github.com/grpc-ecosystem/grpc-gateway v1.4.1 // indirect
 	github.com/hashicorp/go-version v1.0.0 // indirect
 	github.com/hashicorp/hcl v0.0.0-20180404174102-ef8a98b0bbce // indirect
+	github.com/hpcloud/tail v1.0.0 // indirect
+	github.com/imkira/go-interpol v1.1.0 // indirect
 	github.com/iris-contrib/formBinder v0.0.0-20171010160137-ad9fb86c356f // indirect
 	github.com/iris-contrib/go.uuid v2.0.0+incompatible // indirect
+	github.com/iris-contrib/httpexpect v0.0.0-20180314041918-ebe99fcebbce // indirect
+	github.com/jonboulle/clockwork v0.1.0 // indirect
 	github.com/json-iterator/go v1.1.5 // indirect
+	github.com/jtolds/gls v4.2.1+incompatible // indirect
 	github.com/juju/errors v0.0.0-20180806074554-22422dad46e1 // indirect
+	github.com/juju/loggo v0.0.0-20180524022052-584905176618 // indirect
+	github.com/juju/testing v0.0.0-20180820040200-b0b89ba330f2 // indirect
+	github.com/k0kubun/colorstring v0.0.0-20150214042306-9440f1994b88 // indirect
 	github.com/kataras/golog v0.0.0-20180321173939-03be10146386 // indirect
 	github.com/kataras/iris v10.7.0+incompatible
 	github.com/kataras/pio v0.0.0-20180511174041-a9733b5b6b83 // indirect
@@ -38,30 +64,61 @@ require (
 	github.com/mitchellh/mapstructure v1.0.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
+	github.com/moul/http2curl v0.0.0-20170919181001-9ac6cf4d929b // indirect
+	github.com/nats-io/gnatsd v1.3.0 // indirect
 	github.com/nats-io/go-nats v1.5.0 // indirect
 	github.com/nats-io/nuid v1.0.0 // indirect
+	github.com/onsi/ginkgo v1.6.0 // indirect
+	github.com/onsi/gomega v1.4.1 // indirect
 	github.com/opentracing/opentracing-go v1.0.2 // indirect
 	github.com/pelletier/go-toml v1.2.0 // indirect
+	github.com/pkg/errors v0.8.0 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/prometheus/client_golang v0.8.0 // indirect
 	github.com/prometheus/client_model v0.0.0-20180712105110-5c3871d89910 // indirect
 	github.com/prometheus/common v0.0.0-20180801064454-c7de2306084e // indirect
 	github.com/prometheus/procfs v0.0.0-20180725123919-05ee40e3a273 // indirect
 	github.com/ryanuber/columnize v2.1.0+incompatible // indirect
+	github.com/sergi/go-diff v1.0.0 // indirect
 	github.com/shurcooL/sanitized_anchor_name v0.0.0-20170918181015-86672fcb3f95 // indirect
 	github.com/sirupsen/logrus v1.0.6 // indirect
+	github.com/smartystreets/assertions v0.0.0-20180820201707-7c9eb446e3cf // indirect
+	github.com/smartystreets/goconvey v0.0.0-20180222194500-ef6db91d284a // indirect
+	github.com/soheilhy/cmux v0.1.4 // indirect
 	github.com/spf13/afero v1.1.1 // indirect
 	github.com/spf13/cast v1.2.0 // indirect
 	github.com/spf13/jwalterweatherman v0.0.0-20180814060501-14d3d4c51834 // indirect
 	github.com/spf13/pflag v1.0.2 // indirect
 	github.com/spf13/viper v1.1.0
+	github.com/stretchr/testify v1.2.2 // indirect
+	github.com/tmc/grpc-websocket-proxy v0.0.0-20171017195756-830351dc03c6 // indirect
 	github.com/topfreegames/pitaya v0.2.1
+	github.com/uber-go/atomic v1.3.2 // indirect
+	github.com/uber/jaeger-client-go v2.14.0+incompatible // indirect
+	github.com/uber/jaeger-lib v1.5.0 // indirect
+	github.com/ugorji/go/codec v0.0.0-20180831062425-e253f1f20942 // indirect
+	github.com/xeipuuv/gojsonpointer v0.0.0-20180127040702-4e3ac2762d5f // indirect
+	github.com/xeipuuv/gojsonreference v0.0.0-20180127040603-bd5ef7bd5415 // indirect
+	github.com/xeipuuv/gojsonschema v0.0.0-20180816142147-da425ebb7609 // indirect
+	github.com/xiang90/probing v0.0.0-20160813154853-07dd2e8dfe18 // indirect
+	github.com/yalp/jsonpath v0.0.0-20180802001716-5cc68e5049a0 // indirect
+	github.com/yudai/gojsondiff v1.0.0 // indirect
+	github.com/yudai/golcs v0.0.0-20170316035057-ecda9a501e82 // indirect
+	github.com/yudai/pp v2.0.1+incompatible // indirect
+	go.uber.org/atomic v1.3.2 // indirect
 	golang.org/x/crypto v0.0.0-20180820150726-614d502a4dac // indirect
 	golang.org/x/net v0.0.0-20180824152047-4bcd98cce591 // indirect
+	golang.org/x/sync v0.0.0-20180314180146-1d60e4601c6f // indirect
 	golang.org/x/sys v0.0.0-20180824143301-4910a1d54f87 // indirect
 	golang.org/x/text v0.3.0 // indirect
+	golang.org/x/time v0.0.0-20180412165947-fbb02b2291d2 // indirect
 	google.golang.org/genproto v0.0.0-20180817151627-c66870c02cf8 // indirect
 	google.golang.org/grpc v1.14.0 // indirect
-	gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce
+	gopkg.in/airbrake/gobrake.v2 v2.0.9 // indirect
+	gopkg.in/fsnotify.v1 v1.4.7 // indirect
+	gopkg.in/gemnasium/logrus-airbrake-hook.v2 v2.1.2 // indirect
+	gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce // indirect
 	gopkg.in/russross/blackfriday.v2 v2.0.0 // indirect
+	gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7 // indirect
 	gopkg.in/yaml.v2 v2.2.1 // indirect
 )
